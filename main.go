@@ -99,7 +99,7 @@ func main() {
 	}
 
 	// Setup analyzer
-	analyzer := gas.NewAnalyzer(*flagNoSec, logger)
+	analyzer := gas.NewAnalyzer(!(*flagNoSec), logger)
 	if !rules.overwritten {
 		rules.useDefaults()
 	}
